@@ -31,6 +31,28 @@ public class Task10 {
 
         int[] arr;
         // TODO: Пишите код здесь
+        final int min = 0;
+        int count = 0;
 
+
+        final int max = 33;
+        arr = new int[len];
+
+
+        for (int i = 0; i < len; i++) {
+            arr[i] = rnd.nextInt(max - min + 1) + min;
+        }
+        for (int i = 0; i < len; i++) {
+            System.out.println(arr[i] + " ");
+        }
+        for (int i = 1; i < len; i++) {
+
+            if (arr[i] % arr[i - 1] == 0 && arr[i] % arr[i + 1] == 0) {
+                System.out.println(arr[i] + "индекс\t" + i);
+            } else {
+                System.out.println("not found elements");
+                break;
+            }
+        }
     }
 }

@@ -30,7 +30,34 @@ public class Task09 {
 
         int[] arr;
         // TODO: Пишите код здесь
+        final int min=-2;
+        final int max= len;
+      arr=new int [ len];
 
 
+        for (int i = 0; i <  len; i++) {
+            arr[i] = rnd.nextInt(max - min + 1) + min;
+        }
+        for (int i = 0; i <  len; i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+        System.out.println();
+        for (int i = 0; i <  len; i++) {
+            if (arr[i] < -1) {
+                arr[i] =  arr[i] *  arr[i];
+            }
+        }
+        System.out.println("result");
+        for (int i = 0; i <  len; i++) {
+
+            System.out.println(arr[i]+" ");
+        }
     }
+
+
+
 }
+
+
+

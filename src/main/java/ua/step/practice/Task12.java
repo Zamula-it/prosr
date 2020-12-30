@@ -1,5 +1,6 @@
 package ua.step.practice;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -23,12 +24,31 @@ import java.util.Scanner;
 public class Task12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите размернось массива (сколько строк и колонок): ");
-        int rows = scanner.nextInt();
-        int cols = scanner.nextInt();
-
         int[][] marr;
         // TODO: Пишите код здесь
+        boolean flag = true;
+        final int min = 0;
+        int count = 0;
+        System.out.println("enter the size");
+        int size = scanner.nextInt();
+        final int max = 33;
+        int[][] arr = new int[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                arr[i][j] = scanner.nextInt();
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
 
+
+                if (arr[i][j] != arr[j][i])
+                    flag = false;
+            }
+        }
+        System.out.println("\n");
+        System.out.println(flag ? "yes" : "no");
     }
 }
+
+
